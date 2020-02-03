@@ -1,0 +1,23 @@
+html, body {
+    margin: 0 auto;
+    padding: 0;
+    color: #333;
+    font-family: Arial, Serif;
+}
+nav {
+    display: flex;
+    padding: 2rem;
+    width: 100%;
+    background: #eee;
+    font-size: 18px;
+}
+
+form {
+    padding: 2rem;
+    background: yellowgreen;
+}
+
+li {
+    display: flex-item;
+    padding: 3px;
+}

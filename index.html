@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo App in Vue</title>
+  <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app-todo">
+        <nav>Todo App</nav>
+        <form v-on:submit.prevent="addNewTodo">
+            <label for="newTodoText">Add a todo:</label>
+            <input
+                    v-model.lazy="newTodoText"
+                    id="newTodoText"
+                    placeholder="E.g. Feed a cat."
+            />
+            <button>+ Add</button>
+        </form>
+        <ol>
+            <todo-item
+                v-for="(item,index) in groceryList"
+                :todo="item"
+                :key="item.id"
+                v-on:remove="groceryList.splice(index,1)"
+            ></todo-item>
+        </ol>
+    </div>
+ <!-- development version, includes helpful console warnings -->
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ <script src="./main.js"></script>
+</body>
+</html>
